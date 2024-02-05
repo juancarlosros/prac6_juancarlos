@@ -37,6 +37,7 @@ public class SnakeGame extends JPanel implements ActionListener {
         }
 
         for (int yy = 0; yy <= HEIGHT * SCALE; yy += SCALE) {
+            g.setColor(Color.WHITE); //lineas de la cuadricula
             g.drawLine(0, yy, WIDTH * SCALE, yy);
         }
 
