@@ -4,7 +4,7 @@ import objects.Apple;
 import objects.Snake;
 
 import javax.swing.*;
-import java.awt.*;     // juhjtgh
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -28,7 +28,7 @@ public class SnakeGame extends JPanel implements ActionListener {
     }
 
     public void paint(Graphics g) {
-        g.setColor(color(5, 50, 10));//KAKAV E CVETA NA CANVASA NA IGRATA - V RGB FORMAT
+        g.setColor(color(64, 64, 64)); //color fondo de tablero
         g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
         g.setColor(color(255, 216, 0));
 
