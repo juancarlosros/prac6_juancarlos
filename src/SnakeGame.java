@@ -42,11 +42,11 @@ public class SnakeGame extends JPanel implements ActionListener {
         }
 
         for (int d = 0; d < s.length; d++) {
-            g.setColor(color(0, 0, 255));//CVETA NA ZMIYATA
+            g.setColor(color(0, 0, 255));
             g.fillRect(s.snakeX[d] * SCALE + 1, s.snakeY[d] * SCALE + 1, SCALE - 1, SCALE - 1);
         }
 
-        g.setColor(color(255, 0, 0));//CVETA NA YABALKATA
+        g.setColor(color(255, 0, 0));
         g.fillRect(a.posX * SCALE + 1, a.posY * SCALE + 1, SCALE - 1, SCALE - 1);
     }
 
@@ -58,8 +58,8 @@ public class SnakeGame extends JPanel implements ActionListener {
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setResizable(false);
-        f.setSize(WIDTH * SCALE + 7, HEIGHT * SCALE + 29);//TRYBVA DA SE VNIMAVA KOI RED SLED KOI E!!!
-        f.setLocationRelativeTo(null);//PROZORECA SE OTVARYA TOCHNO PO CENTARA
+        f.setSize(WIDTH * SCALE + 7, HEIGHT * SCALE + 29);
+        f.setLocationRelativeTo(null);
         f.add(new SnakeGame());
         f.setVisible(true);
     }
@@ -92,3 +92,4 @@ public class SnakeGame extends JPanel implements ActionListener {
         }
     }
 }
+
