@@ -4,7 +4,7 @@ import objects.Apple;
 import objects.Snake;
 
 import javax.swing.*;
-import java.awt.*;     // juhjtgh
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -28,7 +28,7 @@ public class SnakeGame extends JPanel implements ActionListener {
     }
 
     public void paint(Graphics g) {
-        g.setColor(color(5, 50, 10));//KAKAV E CVETA NA CANVASA NA IGRATA - V RGB FORMAT
+        g.setColor(color(64, 64, 64)); //color fondo de tablero
         g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
         g.setColor(color(255, 216, 0));
 
@@ -37,15 +37,16 @@ public class SnakeGame extends JPanel implements ActionListener {
         }
 
         for (int yy = 0; yy <= HEIGHT * SCALE; yy += SCALE) {
+            g.setColor(Color.WHITE); //lineas de la cuadricula
             g.drawLine(0, yy, WIDTH * SCALE, yy);
         }
 
         for (int d = 0; d < s.length; d++) {
-            g.setColor(color(0, 0, 255));//CVETA NA ZMIYATA
+            g.setColor(color(0, 0, 255));
             g.fillRect(s.snakeX[d] * SCALE + 1, s.snakeY[d] * SCALE + 1, SCALE - 1, SCALE - 1);
         }
 
-        g.setColor(color(255, 0, 0));//CVETA NA YABALKATA
+        g.setColor(color(255, 0, 0));
         g.fillRect(a.posX * SCALE + 1, a.posY * SCALE + 1, SCALE - 1, SCALE - 1);
     }
 
@@ -57,8 +58,8 @@ public class SnakeGame extends JPanel implements ActionListener {
         JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setResizable(false);
-        f.setSize(WIDTH * SCALE + 7, HEIGHT * SCALE + 29);//TRYBVA DA SE VNIMAVA KOI RED SLED KOI E!!!
-        f.setLocationRelativeTo(null);//PROZORECA SE OTVARYA TOCHNO PO CENTARA
+        f.setSize(WIDTH * SCALE + 7, HEIGHT * SCALE + 29);
+        f.setLocationRelativeTo(null);
         f.add(new SnakeGame());
         f.setVisible(true);
     }
@@ -91,3 +92,4 @@ public class SnakeGame extends JPanel implements ActionListener {
         }
     }
 }
+
